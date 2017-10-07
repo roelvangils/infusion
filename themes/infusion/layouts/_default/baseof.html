@@ -37,6 +37,7 @@
     {{ if .IsHome }}
       <link rel="manifest" href="manifest.json">
     {{ end }}
+    <script src="{{ "js/albos.js" | absURL }}"></script>   
   </head>
   <body>
     {{ if ne .Type "print-version" }}

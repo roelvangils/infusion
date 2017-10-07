@@ -24,15 +24,14 @@ So, this&amp;hellip;
     </item>
     
     <item>
-      <title>Installation</title>
+      <title>Installation and configuration</title>
       <link>https://thepaciellogroup.github.io/infusion/patterns/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/installation/</guid>
-      <description>Infusion is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get everything installed step-by-step.
-Install Hugo First you need to install Hugo globally.
-OSX users If you are a Mac user and have Homebrew on your system, installing Hugo is simple:
-brew install hugo Alternatively, you can manually install Hugo from a package. You can verify the installation was successful by typing:</description>
+      <description>To use Albos in a production environment, you need to include albos.min.js in your HTML document. The easiest way is to use our CDN version, but you can also use NPM or clone the repository locally.
+Get the file Link to the file using our CDN If you don&amp;rsquo;t mind hosting from an external location, you can simply paste this line of code before your closing &amp;lt;/body&amp;gt;:
+&amp;lt;script src=&amp;quot;cdn/albos.min.js&amp;quot; /&amp;gt;  Using NPM To host NPM yourself and it include it as a depency in other projects, install the Albos package using NPM:</description>
     </item>
     
     <item>
@@ -62,7 +61,7 @@ CodePen Infusion offers a couple of ways to do this. The first is by embedding C
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/setup/</guid>
-      <description>By now, you should have followed the  Installation instructions. You should have Hugo and Node installed, and a local copy of a forked version of Infusion. You should also have run npm install in the root of that codebase.
+      <description>By now, you should have followed the instructions. You should have Hugo and Node installed, and a local copy of a forked version of Infusion. You should also have run npm install in the root of that codebase.
 &amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start writing documentation, there are a few things still to do in order to get set up. At the moment, your version of Infusion is a facsimile of the original, containing all the content you&amp;rsquo;re reading right now.</description>
     </item>
     
@@ -140,6 +139,24 @@ The expandable shortcode takes three parameters:
     </item>
     
     <item>
+      <title>Advanced examples</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/advanced-examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/advanced-examples/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Basic examples</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/basic-examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/basic-examples/</guid>
+      <description>&amp;lt;section&amp;gt; &amp;lt;h1&amp;gt;Heading&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;Just some text&amp;lt;/p&amp;gt; &amp;lt;a href=&amp;quot;http://www.example.com/&amp;quot;&amp;gt;More…&amp;lt;/a&amp;gt; &amp;lt;/section&amp;gt;   Level 1 folder  Level 2 file Level 2 folder  Level 3 file Level 3 folder  Level 4 file  Level 3 folder  Level 4 file Level 4 file  Level 3 file  Level 2 folder  Level 3 file Level 3 file Level 3 file  Level 2 file  Level 1 file     Launch in separate window   Great stuff Just some text</description>
+    </item>
+    
+    <item>
       <title>Color palettes</title>
       <link>https://thepaciellogroup.github.io/infusion/patterns/coding/color-palettes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -194,6 +211,17 @@ The file tree is described using a markdown nested list structure:
     </item>
     
     <item>
+      <title>Introduction</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/introduction/</guid>
+      <description>Albos — an acronym for aria-labelledby On Steroids — is a (vanilla) JavaScript helper that makes it easier to associate an accessible name to page elements. Albos applies aria-labelledby attributes, but provides a more flexible and intuitive interface.
+To learn more the accessible name computation, see (todo).
+When to use? Please note that not all HTML elements can be given an accessible name using one of the ARIA labeling attributes.</description>
+    </item>
+    
+    <item>
       <title>Notes &amp; warnings</title>
       <link>https://thepaciellogroup.github.io/infusion/patterns/writing/notes-and-warnings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -224,6 +252,15 @@ The example visually-hidden.md snippet describes the CSS needed to create conten
     </item>
     
     <item>
+      <title>Syntax</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/syntax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Tables of contents</title>
       <link>https://thepaciellogroup.github.io/infusion/patterns/writing/tables-of-contents/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -242,6 +279,16 @@ The example visually-hidden.md snippet describes the CSS needed to create conten
       <description>When you&amp;rsquo;re an inclusive designer, it&amp;rsquo;s pertinent to do some testing. Following specs is one thing, but you need to verify that your component works okay for users.
 Infusion provided a tested shortcode that lets you show which browsers and assistive technologies you&amp;rsquo;ve tried your design out in. Here&amp;rsquo;s an example. Note the commas and &amp;ldquo;+&amp;rdquo; signs.
 &amp;#x7b;{% tested using=&#34;Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge&#34; %}}  This outputs:</description>
+    </item>
+    
+    <item>
+      <title>Welcome to Albos</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/welcome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/welcome/</guid>
+      <description>Eentje Tweetje You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Infusion for full details.
+Drietje &amp;lt;body lang=&amp;quot;nl&amp;quot;&amp;gt; &amp;lt;/body&amp;gt;     Tested using   Firefox with JAWS   Safari   Safari iOS with Jaws   Edge       Here&amp;rsquo;s an example of a note shortcode for adding little &amp;ldquo;oh and also&amp;rdquo; notes to your patterns&amp;rsquo; documentation.</description>
     </item>
     
   </channel>

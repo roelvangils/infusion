@@ -31,10 +31,11 @@
     </style>
     <title>
       
-        Installation | Infusion
+        Installation and configuration | Infusion
       
     </title>
     
+    <script src="https://thepaciellogroup.github.io/infusion/js/albos.js"></script>   
   </head>
   <body>
     
@@ -166,7 +167,7 @@
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
                           </svg>
-                          <span class="text">Installation</span>
+                          <span class="text">Installation and configuration</span>
                         </a>
                       </li>
                     
@@ -203,6 +204,51 @@
                             <use xlink:href="#bookmark"></use>
                           </svg>
                           <span class="text">Updating Infusion</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/infusion/patterns/advanced-examples/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Advanced examples</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/infusion/patterns/basic-examples/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Basic examples</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/infusion/patterns/introduction/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Introduction</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/infusion/patterns/syntax/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Syntax</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/infusion/patterns/welcome/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Welcome to Albos</span>
                         </a>
                       </li>
                     
@@ -386,107 +432,33 @@
       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
-      Installation
+      Installation and configuration
     </h1>
     
     
       
 
-  <nav class="toc" aria-labelledby="toc-heading">
-    <h2 id="toc-heading">Table of contents</h2>
-    <ol>
-      
-        <li>
-          <a href="#install-hugo">
-            Install Hugo
-          </a>
-        </li>
-      
-        <li>
-          <a href="#install-node--npm">
-            Install Node &amp; NPM
-          </a>
-        </li>
-      
-        <li>
-          <a href="#get-the-files">
-            Get the files
-          </a>
-        </li>
-      
-    </ol>
-  </nav>
-
 
     
     
 
-<p><strong>Infusion</strong> is built using the static site engine, <a href="https://gohugo.io/">Hugo</a>, and NPM. The codebase is available to download on Github. Let&rsquo;s get everything installed step-by-step.</p>
+<p>To use Albos in a production environment, you need to include <code>albos.min.js</code> in your HTML document. The easiest way is to use our CDN version, but you can also use NPM or clone the repository locally.</p>
 
-<h2 id="install-hugo">Install Hugo</h2>
+<h2 id="get-the-file">Get the file</h2>
 
-<p>First you need to install Hugo globally.</p>
+<h3 id="link-to-the-file-using-our-cdn">Link to the file using our CDN</h3>
 
-<h3 id="osx-users">OSX users</h3>
+<p>If you don&rsquo;t mind hosting from an external location, you can simply paste this line of code before your closing <code>&lt;/body&gt;</code>:</p>
 
-<p>If you are a Mac user and have <a href="https://brew.sh/">Homebrew</a> on your system, installing Hugo is simple:</p>
+<pre><code class="language-html">&lt;script src=&quot;cdn/albos.min.js&quot; /&gt;
+</code></pre>
 
-<pre class="cmd"><code>brew install hugo</code></pre>
+<h3 id="using-npm">Using NPM</h3>
 
+<p>To host NPM yourself and it include it as a depency in other projects, install the Albos package using NPM:</p>
 
-<p>Alternatively, you can manually <a href="https://github.com/gohugoio/hugo/releases">install Hugo from a package</a>. You can verify the installation was successful by typing:</p>
+<pre class="cmd"><code>  npm install albos</code></pre>
 
-<pre class="cmd"><code>hugo version</code></pre>
-
-
-<h3 id="windows-users">Windows users</h3>
-
-<p>Installing on Windows is a bit more involved than on OSX. The authors of Hugo provide <a href="https://gohugo.io/tutorials/installing-on-windows/">a guide</a> with instructions for technical and less technical users.</p>
-
-<p>It&rsquo;s also best you install a Windows Subsystem for running Linux, and therefore <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">bash</a> (<strong>Infusion</strong> incorporates some bash commands in its scripts). <a href="https://msdn.microsoft.com/en-gb/commandline/wsl/install_guide">Microsoft offer a complete guide</a>.</p>
-
-<h2 id="install-node-npm">Install Node &amp; NPM</h2>
-
-<p>It is likely you already have Node and NPM installed on your system. If so, you can skip this step. Otherwise, <a href="https://docs.npmjs.com/getting-started/installing-node">refer to NPM&rsquo;s own guide</a>, which includes a video tutorial.</p>
-
-<h2 id="get-the-files">Get the files</h2>
-
-<p><strong>Infusion</strong> is hosted on Github. To start using it, you&rsquo;ll need to get the files from there. If you are comfortable with the command line, just fork the <a href="https://github.com/ThePacielloGroup/infusion">github.com/ThePacielloGroup/infusion</a> repository, then do a <code>git clone</code> to your local system. Replace <code>[your username]</code> in the following:</p>
-
-<pre class="cmd"><code>git clone https://github.com/[your username]/infusion.git</code></pre>
-
-
-<p>If the command line is not your thing, use Github&rsquo;s web interface to fork  <a href="https://github.com/ThePacielloGroup/infusion">github.com/ThePacielloGroup/infusion</a> and choose <strong>Open in Desktop</strong> from <strong>Clone or download</strong> (see figure 1, below).</p>
-
-
-<figure role="group" aria-describedby="caption-4f6ff97ad7397f1735a833534d0e2e4d">
-  <p><img src="https://thepaciellogroup.github.io/infusion/images/open_in_desktop.png" alt="The open in desktop option, revealed when clicking clone or download" /></p>
-
-  <figcaption id="caption-4f6ff97ad7397f1735a833534d0e2e4d">
-    The Github web interface
-  </figcaption>
-</figure>
-
-
-<aside aria-label="note" class="note">
-  <div>
-    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
-      <use xlink:href="#info"></use>
-    </svg>
-    <p>If you do not have a version of the Github desktop client installed, follow the prompts after clicking <strong>Open in Desktop</strong>.</p>
-
-  </div>
-</aside>
-
-
-<p>While you&rsquo;re in the Github interface, you might as well set up the publishing source for the live site. Choose the Master branch/docs option under <strong>Settings → Github Pages → Source</strong>. See <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/serving/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Serving</a> for more details.</p>
-
-<p>Once you have your local copy of the files, move to the root of that folder and in your terminal run an npm installation:</p>
-
-<pre class="cmd"><code>npm install</code></pre>
-
-
-<p>Now it&rsquo;s time to consult the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Setup</a> pattern.</p>
 
   </main>
 

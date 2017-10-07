@@ -65,6 +65,19 @@
   </url>
   
   <url>
+    <loc>https://thepaciellogroup.github.io/infusion/patterns/advanced-examples/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thepaciellogroup.github.io/infusion/tags/another-tag/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://thepaciellogroup.github.io/infusion/patterns/basic-examples/</loc>
+  </url>
+  
+  <url>
     <loc>https://thepaciellogroup.github.io/infusion/categories/</loc>
     <priority>0</priority>
   </url>
@@ -82,6 +95,11 @@
   </url>
   
   <url>
+    <loc>https://thepaciellogroup.github.io/infusion/tags/example-tag/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://thepaciellogroup.github.io/infusion/patterns/coding/file-trees/</loc>
   </url>
   
@@ -91,6 +109,10 @@
   
   <url>
     <loc>https://thepaciellogroup.github.io/infusion/patterns/media/including-videos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thepaciellogroup.github.io/infusion/patterns/introduction/</loc>
   </url>
   
   <url>
@@ -121,6 +143,10 @@
   </url>
   
   <url>
+    <loc>https://thepaciellogroup.github.io/infusion/patterns/syntax/</loc>
+  </url>
+  
+  <url>
     <loc>https://thepaciellogroup.github.io/infusion/patterns/writing/tables-of-contents/</loc>
   </url>
   
@@ -131,6 +157,10 @@
   
   <url>
     <loc>https://thepaciellogroup.github.io/infusion/patterns/coding/tested/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thepaciellogroup.github.io/infusion/patterns/welcome/</loc>
   </url>
   
 </urlset>

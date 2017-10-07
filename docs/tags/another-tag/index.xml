@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Another Tag on Infusion</title>
+    <link>https://thepaciellogroup.github.io/infusion/tags/another-tag/</link>
+    <description>Recent content in Another Tag on Infusion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://thepaciellogroup.github.io/infusion/tags/another-tag/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Advanced examples</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/advanced-examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/advanced-examples/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Basic examples</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/basic-examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/basic-examples/</guid>
+      <description>&amp;lt;section&amp;gt; &amp;lt;h1&amp;gt;Heading&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;Just some text&amp;lt;/p&amp;gt; &amp;lt;a href=&amp;quot;http://www.example.com/&amp;quot;&amp;gt;More…&amp;lt;/a&amp;gt; &amp;lt;/section&amp;gt;   Level 1 folder  Level 2 file Level 2 folder  Level 3 file Level 3 folder  Level 4 file  Level 3 folder  Level 4 file Level 4 file  Level 3 file  Level 2 folder  Level 3 file Level 3 file Level 3 file  Level 2 file  Level 1 file     Launch in separate window   Great stuff Just some text</description>
+    </item>
+    
+    <item>
+      <title>Syntax</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/syntax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Welcome to Albos</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/welcome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/welcome/</guid>
+      <description>Eentje Tweetje You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Infusion for full details.
+Drietje &amp;lt;body lang=&amp;quot;nl&amp;quot;&amp;gt; &amp;lt;/body&amp;gt;     Tested using   Firefox with JAWS   Safari   Safari iOS with Jaws   Edge       Here&amp;rsquo;s an example of a note shortcode for adding little &amp;ldquo;oh and also&amp;rdquo; notes to your patterns&amp;rsquo; documentation.</description>
+    </item>
+    
+  </channel>
+</rss>

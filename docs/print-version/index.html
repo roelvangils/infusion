@@ -35,6 +35,7 @@
 
     </title>
     
+    <script src="https://thepaciellogroup.github.io/infusion/js/albos.js"></script>   
   </head>
   <body>
     
@@ -163,11 +164,11 @@
         <ul id="patterns-list">
           
             <li class="pattern">
-              <a href="#installation" >
+              <a href="#installation-and-configuration" >
                 <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                   <use xlink:href="#bookmark"></use>
                 </svg>
-                <span class="text">Installation</span>
+                <span class="text">Installation and configuration</span>
               </a>
             </li>
           
@@ -204,6 +205,51 @@
                   <use xlink:href="#bookmark"></use>
                 </svg>
                 <span class="text">Updating Infusion</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
+              <a href="#advanced-examples" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Advanced examples</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
+              <a href="#basic-examples" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Basic examples</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
+              <a href="#introduction" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Introduction</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
+              <a href="#syntax" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Syntax</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
+              <a href="#welcome-to-albos" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Welcome to Albos</span>
               </a>
             </li>
           
@@ -380,80 +426,31 @@
     
       
         <div class="pattern-section">
-          <h1 id="installation" tabindex="-1">
+          <h1 id="installation-and-configuration" tabindex="-1">
             <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
               <use xlink:href="#bookmark"></use>
             </svg>
-            Installation
+            Installation and configuration
           </h1>
           
 
-<p><strong>Infusion</strong> is built using the static site engine, <a href="https://gohugo.io/">Hugo</a>, and NPM. The codebase is available to download on Github. Let&rsquo;s get everything installed step-by-step.</p>
+<p>To use Albos in a production environment, you need to include <code>albos.min.js</code> in your HTML document. The easiest way is to use our CDN version, but you can also use NPM or clone the repository locally.</p>
 
-<h2 id="install-hugo">Install Hugo</h2>
+<h2 id="get-the-file">Get the file</h2>
 
-<p>First you need to install Hugo globally.</p>
+<h3 id="link-to-the-file-using-our-cdn">Link to the file using our CDN</h3>
 
-<h3 id="osx-users">OSX users</h3>
+<p>If you don&rsquo;t mind hosting from an external location, you can simply paste this line of code before your closing <code>&lt;/body&gt;</code>:</p>
 
-<p>If you are a Mac user and have <a href="https://brew.sh/">Homebrew</a> on your system, installing Hugo is simple:</p>
+<pre><code class="language-html">&lt;script src=&quot;cdn/albos.min.js&quot; /&gt;
+</code></pre>
 
-<pre class="cmd"><code>brew install hugo</code></pre>
+<h3 id="using-npm">Using NPM</h3>
 
+<p>To host NPM yourself and it include it as a depency in other projects, install the Albos package using NPM:</p>
 
-<p>Alternatively, you can manually <a href="https://github.com/gohugoio/hugo/releases">install Hugo from a package</a>. You can verify the installation was successful by typing:</p>
+<pre class="cmd"><code>  npm install albos</code></pre>
 
-<pre class="cmd"><code>hugo version</code></pre>
-
-
-<h3 id="windows-users">Windows users</h3>
-
-<p>Installing on Windows is a bit more involved than on OSX. The authors of Hugo provide <a href="https://gohugo.io/tutorials/installing-on-windows/">a guide</a> with instructions for technical and less technical users.</p>
-
-<p>It&rsquo;s also best you install a Windows Subsystem for running Linux, and therefore <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">bash</a> (<strong>Infusion</strong> incorporates some bash commands in its scripts). <a href="https://msdn.microsoft.com/en-gb/commandline/wsl/install_guide">Microsoft offer a complete guide</a>.</p>
-
-<h2 id="install-node-npm">Install Node &amp; NPM</h2>
-
-<p>It is likely you already have Node and NPM installed on your system. If so, you can skip this step. Otherwise, <a href="https://docs.npmjs.com/getting-started/installing-node">refer to NPM&rsquo;s own guide</a>, which includes a video tutorial.</p>
-
-<h2 id="get-the-files">Get the files</h2>
-
-<p><strong>Infusion</strong> is hosted on Github. To start using it, you&rsquo;ll need to get the files from there. If you are comfortable with the command line, just fork the <a href="https://github.com/ThePacielloGroup/infusion">github.com/ThePacielloGroup/infusion</a> repository, then do a <code>git clone</code> to your local system. Replace <code>[your username]</code> in the following:</p>
-
-<pre class="cmd"><code>git clone https://github.com/[your username]/infusion.git</code></pre>
-
-
-<p>If the command line is not your thing, use Github&rsquo;s web interface to fork  <a href="https://github.com/ThePacielloGroup/infusion">github.com/ThePacielloGroup/infusion</a> and choose <strong>Open in Desktop</strong> from <strong>Clone or download</strong> (see figure 1, below).</p>
-
-
-<figure role="group" aria-describedby="caption-4f6ff97ad7397f1735a833534d0e2e4d">
-  <p><img src="https://thepaciellogroup.github.io/infusion/images/open_in_desktop.png" alt="The open in desktop option, revealed when clicking clone or download" /></p>
-
-  <figcaption id="caption-4f6ff97ad7397f1735a833534d0e2e4d">
-    The Github web interface
-  </figcaption>
-</figure>
-
-
-<aside aria-label="note" class="note">
-  <div>
-    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
-      <use xlink:href="#info"></use>
-    </svg>
-    <p>If you do not have a version of the Github desktop client installed, follow the prompts after clicking <strong>Open in Desktop</strong>.</p>
-
-  </div>
-</aside>
-
-
-<p>While you&rsquo;re in the Github interface, you might as well set up the publishing source for the live site. Choose the Master branch/docs option under <strong>Settings → Github Pages → Source</strong>. See <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/serving/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Serving</a> for more details.</p>
-
-<p>Once you have your local copy of the files, move to the root of that folder and in your terminal run an npm installation:</p>
-
-<pre class="cmd"><code>npm install</code></pre>
-
-
-<p>Now it&rsquo;s time to consult the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Setup</a> pattern.</p>
 
         </div>
       
@@ -466,7 +463,7 @@
           </h1>
           
 
-<p>By now, you should have followed the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/installation/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Installation</a> instructions. You should have Hugo and Node installed, and a local copy of a forked version of <strong>Infusion</strong>. You should also have run <code>npm install</code> in the root of that codebase.</p>
+<p>By now, you should have followed the  instructions. You should have Hugo and Node installed, and a local copy of a forked version of <strong>Infusion</strong>. You should also have run <code>npm install</code> in the root of that codebase.</p>
 
 <h2 id="cleaning-the-content-folder">&ldquo;Cleaning&rdquo; the content folder</h2>
 
@@ -682,6 +679,353 @@ theme = "infusion"
   </div>
 </aside>
 
+
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="advanced-examples" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Advanced examples
+          </h1>
+          
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="basic-examples" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Basic examples
+          </h1>
+          <pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Just some text&lt;/p&gt;
+  &lt;a href=&quot;http://www.example.com/&quot;&gt;More…&lt;/a&gt;
+&lt;/section&gt;
+</code></pre>
+
+<div class="file-tree">
+  <ul>
+<li>Level 1 folder
+
+<ul>
+<li>Level 2 file</li>
+<li>Level 2 folder
+
+<ul>
+<li>Level 3 file</li>
+<li>Level 3 folder
+
+<ul>
+<li>Level 4 file</li>
+</ul></li>
+<li>Level 3 folder
+
+<ul>
+<li>Level 4 file</li>
+<li>Level 4 file</li>
+</ul></li>
+<li>Level 3 file</li>
+</ul></li>
+<li>Level 2 folder
+
+<ul>
+<li>Level 3 file</li>
+<li>Level 3 file</li>
+<li>Level 3 file</li>
+</ul></li>
+<li>Level 2 file</li>
+</ul></li>
+<li>Level 1 file</li>
+</ul>
+
+</div>
+
+
+<p>
+<div class="demo-container">
+  
+      <div class="demo-inner" >
+        <div class="demo" id="js-demo-11746e323b330a08124a5241689b114c"></div>
+        <button data-launch="js-demo-11746e323b330a08124a5241689b114c">Launch in separate window</button>
+      </div>
+      
+  
+  <template id="template-11746e323b330a08124a5241689b114c">
+       
+  <section>
+    <h1 id="roelieboelie">Great stuff</h1>
+    <p>Just some text</p>
+    <a href="http://www.example.com/" data-labelledby="#roelieboelie">More…</a>
+  </section>
+  <style>
+  * {
+    font-family: sans-serif;
+  }
+  </style>
+  <script>
+    console.log(demo);
+    albosApply(demo);
+  </script>
+
+  </template>
+  <script>
+    (function() {
+      var root = document.getElementById('js-demo-11746e323b330a08124a5241689b114c');
+      var template = document.getElementById('template-11746e323b330a08124a5241689b114c');
+
+      
+      var demoDiv = document.createElement('div');
+      demoDiv.innerHTML = template.innerHTML;
+      var standaloneScript = demoDiv.querySelector('script');
+      if (standaloneScript) {
+        standaloneScript.textContent = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + standaloneScript.textContent + ' })();';
+      }
+
+      if (document.head.attachShadow) {
+        var templateScript = template.content.querySelector('script');
+        if (templateScript) {
+          var wrappedScript = '(function() { var demo = document.getElementById(\'js-demo-11746e323b330a08124a5241689b114c\').shadowRoot;' + templateScript.textContent + '})();';
+          templateScript.textContent = wrappedScript;
+        }
+        root.attachShadow({mode: 'open'});
+        root.shadowRoot.appendChild(document.importNode(template.content, true));
+      } else {
+        root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> A browser supporting Shadow DOM is needed to run encapsulated demos. You can launch the demo in a separate window ↓</p>';
+      }
+
+      var launchButton = document.querySelector('[data-launch="js-demo-11746e323b330a08124a5241689b114c"]');
+      launchButton.addEventListener('click', function () {
+        var standalone = window.open();
+        standalone.document.body.innerHTML = demoDiv.innerHTML;
+
+        
+        var newScript = standalone.document.createElement('script');
+        var oldScript = standalone.document.querySelector('script');
+        if (oldScript) {
+          newScript.textContent = oldScript.textContent;
+          oldScript.parentNode.removeChild(oldScript);
+          standalone.document.body.appendChild(newScript);
+        }
+        
+
+        standalone.document.title = 'demo ' + "11746e323b330a08124a5241689b114c";
+      });
+    })();
+  </script>
+</div>
+</p>
+
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="introduction" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Introduction
+          </h1>
+          
+
+<p>Albos  — an acronym for <code>aria-labelledby</code> On Steroids — is a (vanilla) JavaScript helper that makes it easier to associate an accessible name to page elements. Albos applies <code>aria-labelledby</code> attributes, but provides a more flexible and intuitive interface.</p>
+
+<p>To learn more the accessible name computation, see (todo).</p>
+
+<h2 id="when-to-use">When to use?</h2>
+
+<p>Please note that not all HTML elements can be given an accessible name using one of the ARIA labeling attributes. They generally won&rsquo;t work reliably across screeenreaders when applied to other elements.</p>
+
+<ul>
+<li>You can safely apply them to links, buttons and all other input types.</li>
+<li>All HTML 5 landmark elements (such as header, footer, main, nav, article, aside and section)</li>
+
+<li><p>Every other element that has a expliciet ARIA role associated to it, such as <code>dialog</code>, <code>slider</code>, <code>tooltip</code> etc.</p></li>
+
+<li><p>Regular <code>&lt;img&gt;</code> elements accept ARIA labels happily as well, and they take precedence over the <code>alt</code> attribute. Generally it&rsquo;s easier to just use an <code>alt</code> attribute though.</p></li>
+</ul>
+
+<p>interactive elements like a (when the href attribute is present), audio and video (when the controls attribute is present), input (unless they are of type=&ldquo;hidden&rdquo;), select, button, and textarea
+elements that have a landmark role – either implicit (header, footer, main, nav, aside, section, and form) or explicitly set via the role attribute
+elements that have an explicit widget role applied using the role attribute – there are 27 widget roles in ARIA 1.1, including dialog, slider, progressbar, tooltip, and table
+iframe and img elements</p>
+
+<h2 id="key-features">Key features</h2>
+
+<ul>
+<li>Use any query selector in your HTML</li>
+<li>Intuitive approach for adding custom text to concatenate values</li>
+<li>Use the true / false value of any checkbox (even custom ones) as a label</li>
+<li>Fixes inconsistencies in VoicOver</li>
+</ul>
+
+<h2 id="example-1-labeling-regions">Example 1: Labeling regions</h2>
+
+<pre><code class="language-html">&lt;div role=&quot;main&quot; data-labelledby=&quot;h1&quot;&gt;
+   &lt;h1&gt;Wild fires spread across the San Diego Hills&lt;/h1&gt;
+   Strong winds expand fires ignited by high temperatures ...
+&lt;/div&gt;
+</code></pre>
+
+<h2 id="example-2-labeling-images">Example 2: Labeling images</h2>
+
+<pre><code class="language-html">&lt;figure role=&quot;image&quot; data-labelledby=&quot;this img&quot; data-describedby=&quot;this figcaption&quot; role=&quot;group&quot;&gt;
+  &lt;img alt=&quot;The Sydney Opera House&quot; src=&quot;opera.jpg&quot; /&gt;
+  &lt;figcaption&gt;We saw the opera Barber of Seville at this place&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+
+<h2 id="example-3-descriptions-for-input-fields">Example 3: Descriptions for input fields</h2>
+
+<pre><code class="language-html">&lt;fieldset id=&quot;notifications&quot;&gt;
+  &lt;legend&gt;Notification settings&lt;/legend&gt;
+  &lt;span&gt;Notify&lt;/span&gt;
+  &lt;select name=&quot;days&quot; data-describedby=&quot;#notifications span:eq[1], this, #notifications span:eq[1]&quot;&gt;
+    &lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;      
+  &lt;/select&gt;
+  &lt;span&gt;days in advance&lt;/span&gt;
+&lt;/fieldset&gt;
+</code></pre>
+
+<h2 id="example-4">Example 4</h2>
+
+<p>In this pattern, the label Username comes from the associated <code>&lt;label&gt;</code> element. To make sure the hint (tooltip) is also announced when a AT is filling out the form (e.g. when in Forms mode, or when navigating using the tab key), we have to associate the tooltip.</p>
+
+<p>You can use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_selectors">adjacent sibling combinator (+)</a> for this. It matches the second element in the selector if it immediately follows the first element, and both are children of the same parent element.</p>
+
+<pre><code class="language-html">&lt;div&gt;
+  &lt;label fpr=&quot;username&quot;&gt;Username&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;username&quot; data-describedby=&quot;this + [role=tooltip]&quot; /&gt;
+  &lt;div role=&quot;tooltip&quot;&gt;Your username is your email address&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2 id="example-5">Example 5</h2>
+
+<ul class="tasks">
+  <li class="task">
+    <label>
+      <input type="checkbox" data-describedby="this:checked ? 'Task completed' : this:parent > .dueIn" />
+      <span class="taskDescription">Buy milk</span>
+    </label>
+    <span class="dueIn">Due in 5 days</span>
+  </li>
+  <li class="task">
+    <label>
+      <input type="checkbox" data-describedby="this:checked ? 'Task completed' : this:parent > .dueIn" />
+      <span class="taskDescription">Buy milk</span>
+    </label>
+    <span class="dueIn">Due in 3 days</span>
+  </li>
+  <li>
+    (…)
+  </i>
+</ul>
+
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="syntax" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Syntax
+          </h1>
+          
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="welcome-to-albos" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Welcome to Albos
+          </h1>
+          
+
+<h1 id="eentje">Eentje</h1>
+
+<h2 id="tweetje">Tweetje</h2>
+
+<p>You can just write <strong>markdown</strong> here. But don&rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See <a href="https://thepaciellogroup.github.io/infusion/">the documentation for <strong>Infusion</strong></a> for full details.</p>
+
+<h2 id="drietje">Drietje</h2>
+
+<pre><code class="language-html">&lt;body lang=&quot;nl&quot;&gt;
+&lt;/body&gt;
+</code></pre>
+
+
+
+
+<table class="tested">
+  <tr>
+    <th scope="row">
+      <svg viewBox="0 0 177.16535 177.16535" focusable="false" aria-hidden="true">
+        <use xlink:href="#tick"></use>
+      </svg>
+      Tested using
+    </th>
+    
+      <td>
+        
+          
+          
+          
+          
+          <img src="https://thepaciellogroup.github.io/infusion/images/browser-firefox.svg" alt="">
+          <span><strong>Firefox</strong></span>
+          <span class="additional">with <strong>JAWS</strong></span>
+        
+      </td>
+    
+      <td>
+        
+          
+          
+          <img src="https://thepaciellogroup.github.io/infusion/images/browser-safari.svg" alt="">
+          <span><strong>Safari</strong></span>
+        
+      </td>
+    
+      <td>
+        
+          
+          
+          
+          
+          <img src="https://thepaciellogroup.github.io/infusion/images/browser-safari-ios.svg" alt="">
+          <span><strong>Safari iOS</strong></span>
+          <span class="additional">with <strong>Jaws</strong></span>
+        
+      </td>
+    
+      <td>
+        
+          
+          
+          <img src="https://thepaciellogroup.github.io/infusion/images/browser-edge.svg" alt="">
+          <span><strong>Edge</strong></span>
+        
+      </td>
+    
+  </tr>
+</table>
+
+
+<p><aside aria-label="warning" class="note warning">
+  <div>
+    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+      <use xlink:href="#warning"></use>
+    </svg>
+    <p>Here&rsquo;s an example of a note shortcode for adding little &ldquo;oh and also&rdquo; notes to your patterns&rsquo; documentation.</p>
+
+  </div>
+</aside>
+</p>
 
         </div>
       
@@ -1528,7 +1872,8 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 }
 </code></pre>
 
-<p>Use it sparingly since, in most cases, what is identified non-visually should also be presented visually. Bear in mind that not all screen reader users are blind users.
+<p>Use it sparingly since, in most cases, what is identified non-visually should also be presented visually. Bear in mind that not all screen reader users are blind users.</p>
+
 
 
           </div>
