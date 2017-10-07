@@ -78,6 +78,8 @@ You can use the [adjacent sibling combinator (+)](https://developer.mozilla.org/
 ```
 
 ## Example 5
+
+```html
 <ul class="tasks">
   <li class="task">
     <label>
@@ -97,3 +99,4 @@ You can use the [adjacent sibling combinator (+)](https://developer.mozilla.org/
     (…)
   </i>
 </ul>
+```
